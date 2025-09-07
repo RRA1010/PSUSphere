@@ -26,7 +26,7 @@ class Organization(BaseModel):
     college = models.ForeignKey(College, null=True, blank=True, on_delete=models.CASCADE)
     description = models.CharField(max_length = 500)
 
-    def __str__(self):  
+    def __str__(self):
         return self.name
 
 class Student(BaseModel):
