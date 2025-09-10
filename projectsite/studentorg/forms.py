@@ -2,7 +2,7 @@ from django.forms import ModelForm
 from django import forms
 from .models import Organization, OrgMember, College
 from .models import Student
-
+from .models import Program
 
 class OrganizationForm(ModelForm):
     class Meta:
@@ -22,4 +22,9 @@ class StudentForm(ModelForm):
 class CollegeForm(ModelForm):
     class Meta:
         model = College
+        fields = "__all__"
+
+class ProgramForm(ModelForm):
+    class Meta:
+        model = Program
         fields = "__all__"
