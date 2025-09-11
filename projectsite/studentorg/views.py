@@ -103,7 +103,7 @@ class CollegeUpdateView(UpdateView):
 class CollegeDeleteView(DeleteView):
     model = College
     template_name = 'college_del.html'
-    success_ur = reverse_lazy('college-list')
+    success_url = reverse_lazy('college-list')
 
 class ProgramList(ListView):
     model = Program
