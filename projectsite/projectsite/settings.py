@@ -45,10 +45,12 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.github',
+    'rest_framework',
+    'rest_framework.authtoken', #token add
+    'api',
     "studentorg",
     "widget_tweaks",
     'pwa',
-
 ]
 
 if "pythonanywhere" in socket.gethostname():
@@ -162,6 +164,17 @@ ACCOUNT_SIGNUP_FIELDS = [
     "password1*", 
     "password2*", 
 ]
+
+# DRF SETUP TOKENS
+# REST CONFIG
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+}
 
 PWA_APP_NAME = 'ProjectSite'
 PWA_APP_DESCRIPTION = "A Progressive Web App version of ProjectSite"

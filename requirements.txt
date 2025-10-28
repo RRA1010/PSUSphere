@@ -5,7 +5,9 @@ charset-normalizer==3.4.3
 cryptography==45.0.7
 Django==5.2.5
 django-allauth==65.11.2
+django-pwa==2.0.1
 django-widget-tweaks==1.5.0
+djangorestframework==3.16.1
 Faker==37.5.3
 idna==3.10
 pycparser==2.23

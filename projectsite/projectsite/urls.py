@@ -25,7 +25,8 @@ from studentorg import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('pwa.urls')),
+    path('api/', include('api.urls')), # api routes
+    path('', include('pwa.urls')), #pwa
     path('accounts/',include('allauth.urls')), #allauth routes
     path('', views.HomePageView.as_view(), name='home'),
     path('organization_list', OrganizationList.as_view(), name='organization-list'),
